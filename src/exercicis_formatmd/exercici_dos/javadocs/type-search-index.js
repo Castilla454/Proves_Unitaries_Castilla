@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"exercicis_formatmd.exercici_dos","l":"Vocals"},{"p":"exercicis_formatmd.exercici_dos","l":"VocalsTest"}];updateSearchResults();

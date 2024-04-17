@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"exercicis_formatmd.exercici_uno"}];updateSearchResults();

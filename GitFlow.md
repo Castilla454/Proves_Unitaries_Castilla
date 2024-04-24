@@ -16,19 +16,19 @@ Se trata de un estándar que siguen los equipos de trabajo de muchas empresas, p
   
 - ## ¿CÓMO TRABAJAR CON GIT FLOW?
 -  Para trabajar con estas ramas existen una serie de comandos específicos, pero para ello, después de crear nuestro repositorio, debemos de iniciar git flow.
-  ``` git flow init ```
+- ``` git flow init ```
  Ahora vamos a ponernos en situación y vamos a pensar que tenemos un equipo de 4 personas para desarrollar un proyecto en Java. Lo primero sería que una persona creará el proyecto en su máquina. Una vez creado tendría que crear un repositorio LOCAL para ese proyecto y después iniciar git flow. Cómo es lógico, cada uno de los miembros del equipo va a trabajar en su ordenador, por lo tanto precisaremos de un repositorio remoto en el que poner en común todo el código. Ahora, un miembro del equipo creará el repositorio remoto, vacío, para vincularlo con el local. Tanto dentro del repositorio remoto como local debéis contar con dos ramas: master y develop. Además de hacer colaboradores al resto del grupo y proteger la rama master para que nadie pueda hacer merge con está sin hacer un pull request. Cuando estos pasos estén completos, cada miembro del equipo tendrá que clonar el repositorio y crear una rama **feature** nueva para cada parte que vaya a desarrollar. ¿Cómo inicio esa nueva rama?
-``` git flow feature start feature_name ```
+-``` git flow feature start feature_name ```
  Que en realidad hace:
-``` git checkout develop git checkout -b feature_branch ```
+-``` git checkout develop git checkout -b feature_branch ```
 ¿Cómo finalizo la rama cuando doy por finalizada la tarea?
-``` git flow feature finish feature_name ```
+-``` git flow feature finish feature_name ```
 O lo que es lo mismo:
-``` git checkout develop git merge feature_branch ```
+-``` git checkout develop git merge feature_branch ```
 Cuando ya se hayan desplegado las suficientes mejoras o ha llegado una fecha determinada, vamos a crear de manera temporal la rama **release** para subir a producción el proyecto. Aquí en esta rama se harán las últimas pruebas, y cuando se cierre se establecerá el número de la versión en un tag. Esta rama hará merge con **master** y con **develop**. Para hacer una release no hace falta que estén todas las features terminadas. Por último, cuando cerremos la release tendremos que hacer un push con el tag que hayamos elegido para la versión, por ejemplo **v0.1**. **¿Cómo subimos a producción las mejoras que hemos ido añadiendo?** Tenemos que abrir una rama **release**:
-``` git flow release start version ```
+-``` git flow release start version ```
  Ejecutamos las pruebas unitarias y comprobamos que funcionan correctamente. Después cerramos la rama con:
-``` git flow release finish 'version' ```
+-``` git flow release finish 'version' ```
 Después comprueba que en GitHub se han llevado todos los cambios pertenecientes al cambio de versión.
 
 -  ## PROYECTO PROPUESTO

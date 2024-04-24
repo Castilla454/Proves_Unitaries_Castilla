@@ -5,6 +5,7 @@
 - Feature
 - Release
 - Hotfix
+  
 Se trata de un estándar que siguen los equipos de trabajo de muchas empresas, pero no es la única forma para trabajar en equipo, existen alternativas como Trunk-Based Development. Antes de continuar sería conveniente visualizar la parte del tutorial donde se explica. Pincha aquí para verlo. **Siguiendo este flujo de trabajo vamos a conseguir desarrollar un software de manera estructurada y con la seguridad de tener controlado el código que desarrolla cada componente del equipo** 
 ## RAMAS EN GITFLOW 
 - **Develop**: Aquí se irán incorporando todas las mejoras (features) que el equipo vaya implementando. Todo lo que hay aquí ha pasado las pruebas. - **Main**: Es la rama que contiene las diferentes versiones del software y que mandaremos a producción. - **Feature**: Se crearán tantas como mejoras existan. Los diferentes equipos o personas que se vayan encargando de estas mejoras trabajarán sobre estas ramas. - **Release**: Es la rama intermedia que creamos para pasar de la rama **develop** a la rama **main**. Cuando esta rama se cierra, crea un tag en **main** y se cierra sobre está y la rama **develop**. - **Hotfix**: Se emplea para solucionar errores que han surgido después de haber subido el proyecto a producción. Cuando hacemos cambios en esta rama y se cierra, lleva los cambios a **main** y a **develop**.
